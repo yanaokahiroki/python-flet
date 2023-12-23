@@ -9,10 +9,12 @@ def main(page: ft.Page):
     text_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
 
     def decrement(e: ControlEvent) -> None:
+        """テキストの数字を1減らす"""
         text_number.value = str(int(text_number.value) - 1)
         page.update()
 
     def increment(e: ControlEvent) -> None:
+        """テキストの数字を1増やす"""
         text_number.value = str(int(text_number.value) + 1)
         page.update()
 
