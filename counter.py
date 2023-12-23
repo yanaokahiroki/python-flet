@@ -1,4 +1,5 @@
 import flet as ft
+from flet_core.control_event import ControlEvent
 
 
 def main(page: ft.Page):
@@ -7,11 +8,11 @@ def main(page: ft.Page):
 
     text_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
 
-    def minus_click(e):
+    def minus_click(e: ControlEvent) -> None:
         text_number.value = str(int(text_number.value) - 1)
         page.update()
 
-    def plus_click(e):
+    def plus_click(e: ControlEvent) -> None:
         text_number.value = str(int(text_number.value) + 1)
         page.update()
 
